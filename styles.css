@@ -25,6 +25,8 @@ body {
   min-width: 320px;
 }
 
+/*  Header Menu */
+
 header {
   width: 100%;
   height: 88px;
@@ -34,24 +36,24 @@ header {
   justify-content: space-between;
 }
 
-#header__menu_left {
+.header__menu-left {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-#header__menu_right {
+.header__menu-right {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
 
-.header__menu_element {
+.header__menu-element {
   margin: 16px 8px;
 }
 
-.header__menu_text {
+.header__menu-text {
   padding: 8px;
   font-family: "TT Lakes";
   font-weight: 500;
@@ -61,7 +63,7 @@ header {
   color: #1b1c21;
 }
 
-#header__logo {
+.header__logo {
   margin: 10.59px 12.73px 10.59px 8.73px;
 }
 
@@ -72,10 +74,12 @@ header {
   margin: 20px 12px 28px 4px;
 }
 
-.hidden,
-.hidden_last {
+.header__hidden-element,
+.header__hidden-text {
   display: none;
 }
+
+/* Main */
 
 main {
   width: 100%;
@@ -84,12 +88,14 @@ main {
   height: calc(100vh - 88px);
 }
 
+/* Заголовок раздела Main */
+
 .main__title {
   display: flex;
   margin: 0 16px 12px 0;
 }
 
-#aqua_dash {
+.main__aqua-dash {
   height: 40px;
   border-right: 4px solid #41f6d7;
   border-radius: 4px;
@@ -103,6 +109,8 @@ main {
   line-height: 40px;
   letter-spacing: -0.6px;
 }
+
+/* Меню услуг */
 
 .main__services {
   display: flex;
@@ -136,12 +144,14 @@ main {
   cursor: default;
 }
 
-.main__text_and_photo {
+/* Main content. Текст и фото */
+
+.main__content { 
   display: flex;
   flex-direction: column;
 }
 
-#main__text {
+#main__text {  /* Основной текст */
   width: 90vw;
   height: 90px;
   margin: 12px 16px 8px 16px;
@@ -155,15 +165,11 @@ main {
   overflow: hidden;
 }
 
-input[type="checkbox"] {
+.checkbox_read-more {
   display: none;
 }
 
-input[type="checkbox"]:checked ~ section #main_text {
-  height: auto;
-}
-
-label {
+#label_read-more {  /* Кнопка "Читать далее" */
   display: flex;
   align-items: center;
   margin: 8px 16px;
@@ -175,21 +181,23 @@ label {
   letter-spacing: 0.2px;
 }
 
-.main__image img {
+.main__image img {  /* Фото */
   width: 100%;
   margin: 8px 0 8px;
 }
 
+/* Для экранов от 768 до 1120 пикселей в ширину */
+
 @media screen and (min-width: 768px) {
-  .hidden {
+  .header__hidden-element {
     display: flex;
   }
 
-  #header__menu_left #header__logo {
+  .header__logo {
     order: 3;
   }
 
-  .main__text_and_photo {
+  .main__content {
     flex-direction: row;
     height: 308px;
   }
@@ -208,8 +216,10 @@ label {
   }
 }
 
+/* Для экранов от 1120 пикселей в ширину */
+
 @media screen and (min-width: 1120px) {
-  .hidden_last {
+  .header__hidden-text {
     display: flex;
   }
 
