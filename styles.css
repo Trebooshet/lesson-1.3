@@ -115,7 +115,7 @@ main {
 .main__services {
   display: flex;
   flex-direction: row;
-  overflow: hidden;
+  overflow-x: scroll ;
   margin: 12px 16px;
 }
 
