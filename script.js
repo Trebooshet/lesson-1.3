@@ -55,7 +55,7 @@ window.addEventListener('resize', resizeReadMore)
             burgerMenu.style.height = "100vh";
             burgerMenu.style.width = "320px";
             burgerCloseButton.style.display = "none";
-            document.querySelector("header").style.display = "none";
+            header.style.display = "none";
             main.style.opacity = 1;
             main.style.marginLeft = "320px";
             main.style.width = "calc(100vw - 320px)";
@@ -84,6 +84,16 @@ window.addEventListener('resize', resizeReadMore)
             headerMenuRight.appendChild(callLogo);
             headerMenuRight.appendChild(chatLogo);
             headerMenuRight.appendChild(profileLogo)
+            if (window.innerWidth < 768) {
+                callLogo.style.display = "none";
+                chatLogo.style.display = "none";
+                profileLogo.style.display = "none";
+            }
+            else {
+                callLogo.style.display = "flex";
+                chatLogo.style.display = "flex";
+                profileLogo.style.display = "flex";
+            }
         }
     }   
     else if (isOpenAnyMenu && window.innerWidth >= 1440) { /* Есть открытое меню и ширина > 1440 */
@@ -93,7 +103,7 @@ window.addEventListener('resize', resizeReadMore)
             burgerMenu.style.height = "100vh";
             burgerMenu.style.width = "320px";
             burgerCloseButton.style.display = "none";
-            document.querySelector("header").style.display = "none";
+            header.style.display = "none";
             main.style.opacity = 1;
             main.style.marginLeft = "320px";
             main.style.width = "calc(100vw - 320px)";
@@ -104,8 +114,10 @@ window.addEventListener('resize', resizeReadMore)
             burgerMenuIcons.appendChild(callLogo);
             burgerMenuIcons.appendChild(chatLogo);
             burgerMenuIcons.appendChild(profileLogo);
-    }    
-}
+        }  
+        else {openBurgerMenu()}  
+     }   
+
 
 window.addEventListener("resize", resizeWindow) /* Адаптация контента при загрузке страницы */
 window.addEventListener("load", resizeWindow)   /* Адаптация контента при изменении ширины страницы */
@@ -119,11 +131,24 @@ function openBurgerMenu() {             /* Функция открыть BurgerM
     burgerMenuIcons.appendChild(callLogo);
     burgerMenuIcons.appendChild(chatLogo);
     burgerMenuIcons.appendChild(profileLogo);
+    callLogo.style.display = "flex";
+    chatLogo.style.display = "flex";
+    profileLogo.style.display = "flex";
     isOpenAnyMenu = true; 
 
-    if (window.innerWidth >= 510) {
+    if (window.innerWidth >= 1440) {
+        burgerMenu.style.width = "320px";
+        burgerMenu.style.height = "100vh";
+        burgerMenu.style.boxShadow = "0 0 0"; 
+        header.style.opacity = "1";
+        main.style.opacity = "1";
+        main.style.marginLeft = "320px";
+        main.style.width = "calc(100vw - 320px)";}
+
+    else if (window.innerWidth >= 510) {
         header.style.opacity = 0.05;
         main.style.opacity = 0.05;
+        burgerMenu.style.width = "320px";
         burgerMenu.style.height = "100vh";
         burgerMenu.style.boxShadow = "1px 0 40px rgb(172, 170, 200)";
     }
@@ -138,7 +163,8 @@ function openBurgerMenu() {             /* Функция открыть BurgerM
 burgerCloseButton.addEventListener("click", closeBurgerMenu); /* Закрыть BurgerMenu кнопкой*/
 
 document.addEventListener("click", (event) => {  /* Закрыть BurgerMenu кликом по пустой области*/
-    if (!burgerMenu.contains(event.target) && !burgerButton.contains(event.target)) {
+    if (!burgerMenu.contains(event.target) && 
+        !burgerButton.contains(event.target)) {
         closeBurgerMenu()
     }
 })
@@ -150,6 +176,11 @@ function closeBurgerMenu() {    /* Функция закрыть BurgerMenu */
     headerMenuRight.appendChild(profileLogo);
     header.style.opacity = 1;
     main.style.opacity = 1;
+    if (window.innerWidth <= 768) {
+    callLogo.style.display = "none";
+    chatLogo.style.display = "none";
+    profileLogo.style.display = "none";
+    }
     isOpenAnyMenu = false; 
     
 }
