@@ -363,7 +363,7 @@ main {
   }
 }
 
-@keyframes spinBounce {
+@keyframes rotation {       /* Анимация вращения */
   0% {
     transform: rotate(0deg);
   }
@@ -376,5 +376,5 @@ main {
 }
 
 #call-logo {
-  animation: spinBounce 5s infinite linear;
+  animation: rotation 5s infinite linear;
 }
