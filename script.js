@@ -164,7 +164,7 @@ burgerCloseButton.addEventListener("click", closeBurgerMenu); /* Закрыть 
 
 document.addEventListener("click", (event) => {  /* Закрыть BurgerMenu кликом по пустой области*/
     if (!burgerMenu.contains(event.target) && 
-        !burgerButton.contains(event.target)) {
+        !burgerButton.contains(event.target) && window.innerWidth < 1440) {
         closeBurgerMenu()
     }
 })

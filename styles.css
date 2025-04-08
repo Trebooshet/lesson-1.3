@@ -26,6 +26,7 @@
 body {
   width: 100%;
   min-width: 320px;
+  
 }
 
 /*  Header Menu */
@@ -113,6 +114,9 @@ header {
     justify-content: space-between;  
 }
 
+.burger-menu_header_left {
+  display: flex;
+}
 
 .burger-menu_services {
     display: flex;
@@ -359,3 +363,18 @@ main {
   }
 }
 
+@keyframes spinBounce {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#call-logo {
+  animation: spinBounce 5s infinite linear;
+}
