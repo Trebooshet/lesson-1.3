@@ -91,12 +91,14 @@ header {
 /* Burger menu */
 
 .header__burger-menu-container {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 1;
     width: 320px;
-    height: auto;
+    height: 100vh;
+    min-height: auto;
+    overflow-y: auto;
     padding-bottom: 16px;
     background-color: #ffffff;
     flex-direction: column;
@@ -272,7 +274,7 @@ main {
   width: 90vw;
   height: 90px;
   margin: 12px 16px 8px 16px;
- 
+  text-indent: 1em;
   font-weight: 100;
   font-size: 14px;
   line-height: 18px;
@@ -316,6 +318,7 @@ main {
 
   .main__content {
     flex-direction: row;
+    justify-content: space-between;
     height: 308px;
   }
 
@@ -340,16 +343,14 @@ main {
     display: flex;
   }
 
-  .main__services {
-    flex-wrap: wrap;
-  }
-
   .service {
     padding: 8px 20px;
   }
 
   #main__text {
-    width: calc(50vw - 70px);
+    font-size: 1.1em;
+    line-height: 24px;
+    width: calc((100vw - 70px)/2);
     height: 160px;
     justify-content: flex-left;
     margin-left: 34px;
@@ -362,6 +363,11 @@ main {
     margin-right: 24px;
   }
 }
+
+@media screen and (min-width: 1120px) {
+  #main__text {
+    width: calc((100vw - 370px)/2);
+}}
 
 @keyframes rotation {       /* Анимация вращения */
   0% {
