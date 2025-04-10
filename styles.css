@@ -26,7 +26,7 @@
 body {
   width: 100%;
   min-width: 320px;
-  
+  overflow: auto;
 }
 
 /*  Header Menu */
@@ -91,13 +91,12 @@ header {
 /* Burger menu */
 
 .header__burger-menu-container {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     width: 320px;
-    height: 100vh;
-    min-height: auto;
+    
     overflow-y: auto;
     padding-bottom: 16px;
     background-color: #ffffff;
@@ -105,6 +104,7 @@ header {
     justify-content: space-between;
     display: none;
     transition: 0.5s;
+    
 }
 
 
@@ -350,7 +350,7 @@ main {
   #main__text {
     font-size: 1.1em;
     line-height: 24px;
-    width: calc((100vw - 70px)/2);
+    width: calc((100vw - 370px)/2);
     height: 160px;
     justify-content: flex-left;
     margin-left: 34px;
@@ -364,10 +364,6 @@ main {
   }
 }
 
-@media screen and (min-width: 1120px) {
-  #main__text {
-    width: calc((100vw - 370px)/2);
-}}
 
 @keyframes rotation {       /* Анимация вращения */
   0% {
