@@ -29,6 +29,11 @@ body {
   overflow: auto;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  all: unset;
+ 
+}
+
 /*  Header Menu */
 
 header {
@@ -159,6 +164,9 @@ header {
 }
 
 .burger-menu_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 8px;
 }
 
@@ -195,9 +203,11 @@ header {
 main {
   width: 100%;
   min-width: 320px;
+  height: auto;
   background-color: #f8f8f8;
   padding-top: 18px;
-  height: calc(100vh - 88px);
+  overflow-x: hidden;
+  
 }
 
 /* Заголовок раздела Main */
@@ -268,6 +278,8 @@ main {
 .main__content { 
   display: flex;
   flex-direction: column;
+  height: auto;
+
 }
 
 #main__text {  /* Основной текст */
@@ -284,6 +296,11 @@ main {
   overflow: hidden;
 }
 
+.main__image img {  /* Фото */
+  width: 100%;
+  margin: 8px 0 8px;
+}
+
 .checkbox_read-more {
   display: none;
 }
@@ -293,16 +310,27 @@ main {
   align-items: center;
   margin: 8px 16px;
   text-wrap: nowrap;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.2px;
 }
 
-.main__image img {  /* Фото */
-  width: 100%;
-  margin: 8px 0 8px;
+.main__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 45px 33px 13px 33px;
+}
+
+.main__footer div {
+  margin: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: #7E7E82;
 }
 
 /* Main Для экранов от 768 до 1120 пикселей в ширину */
@@ -319,7 +347,7 @@ main {
   .main__content {
     flex-direction: row;
     justify-content: space-between;
-    height: 308px;
+   
   }
 
   #main__text {
@@ -333,6 +361,11 @@ main {
     width: 50vw;
     justify-content: flex-right;
     margin-right: 24px;
+  }
+
+  .main__footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -378,5 +411,5 @@ main {
 }
 
 #call-logo {
-  animation: rotation 5s infinite linear;
+  animation: rotation 10s infinite linear;
 }

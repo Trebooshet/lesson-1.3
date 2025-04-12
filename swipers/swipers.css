@@ -1,0 +1,270 @@
+body h2.swiper-title {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: #7e7e82;
+  margin: 16px;
+  text-wrap: wrap;
+}
+
+.services-brands, .services-technics, .prices {
+  margin: 16px;
+}
+
+.brend-swiper {
+  /* width: 100%; */
+  /* padding: 16px; */
+  height: 104px;
+}
+
+.brend-swiper-slide {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 240px !important;
+  height: 72px !important;
+  align-items: center !important;
+  padding: 0 16px !important;
+  background-color: white !important;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.brend-grid {
+  display: none;
+  height: 168px;
+  margin: 16px;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fill, 224px);
+  grid-template-rows: repeat(2, 74px);
+  gap: 16px;
+}
+
+.brend-grid-slide {
+  display: flex;
+  justify-content: space-between;
+  width: 224px;
+  height: 72px;
+  border: 1px solid black;
+  border-radius: 6px;
+  align-items: center;
+  padding: 0 16px;
+  background-color: white;
+}
+
+.technic-swiper {
+   height: 174px;
+}
+
+.technic-swiper-slide {
+   height: 160px !important;
+   width: 240px !important; 
+   display: flex !important;
+   justify-content: space-between !important;
+   align-items: flex-start !important;
+   padding: 16px 16px !important;
+   background-color: white !important;
+   border: 1px solid black;
+   border-radius: 6px;
+}
+
+.technic-swiper-slide a,
+.technic-grid-slide a {
+   align-self: flex-end;
+}
+
+.swiper-pagination-brend, 
+.swiper-pagination-technic,
+.swiper-pagination-prices {
+    display: flex;
+    justify-content: center;
+}
+
+.technic-grid {
+    display: none;
+    height: 168px;
+    margin: 16px;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fill, 224px);
+    grid-template-rows: repeat(1, 160px);
+    gap: 16px;
+}
+
+.technic-grid-slide {
+    display: flex;
+    justify-content: space-between;
+    width: 224px;
+    height: 160px;
+    border: 1px solid black;
+    border-radius: 6px;
+    align-items: flex-start;
+    padding: 16px 16px;
+    background-color: white;
+}
+
+
+.button_show-all-slides {   /* Кнопка "Показать все" в сервисах */
+  margin-left: 8px;
+  display: none;
+  border: none;
+  align-items: center;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.prices-swiper {
+    height: 214px;
+    width: 100%;
+}
+
+.prices-swiper-slide {
+    width: 260px !important; 
+    height: 200px !important;
+    display: flex !important;
+    background-color: white !important;
+    border-radius: 6px;
+ }
+
+.prices-container {
+    width: 260px;
+    height: 200px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.prices-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: #7E7E82;
+}
+
+.prices-text, .prices-table_row {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+  }
+
+.prices-info_with-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-button {
+    width: 119px;
+    height: 32px;
+    background-image: url("../images/swipers/order-button.svg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    border-color: white;
+}
+
+.prices-table {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    margin: 0 8px;
+    padding: 0 16px;
+    border-radius: 5px;
+}
+
+.prices-table_header {
+    height: 65px;
+    width: 100vw;
+    display: none;
+    align-items: center;
+    margin: 0 8px;
+    padding: 0 16px;
+    background-color: #F8F8F8;
+    color: #7E7E82;
+}
+
+.prices-table_row {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.table_price-column {
+    position: absolute;
+    left: 55%;
+}
+
+.table_time-column {
+    position: absolute;
+    left: 68%;
+}
+
+.prices-table_description {
+    margin: 24px 24px 0 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+
+.prices-table_link a {
+    display: inline-block;
+    text-wrap: wrap;
+    text-decoration: none;
+    margin: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+.prices-table_link a img {
+    margin-bottom: -7px;
+}
+
+.prices-table_link a:visited,
+.prices-table_link a:-webkit-any-link {
+    color: #1B1C21;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .brend-swiper, .technic-swiper, .prices-swiper {
+    display: none !important;
+  }
+
+  .brend-grid, 
+  .technic-grid {
+    display: grid;
+  }
+
+  .button_show-all-slides,
+  .prices-table,
+  .prices-table_header {
+    display: flex;
+}
+
+  .prices-table_description {
+    width: 421px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+    .brend-grid, 
+    .technic-grid {
+        gap: 22px;
+    }
+  }

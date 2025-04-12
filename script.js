@@ -1,5 +1,3 @@
-'use strict'
-
 const labelReadMore = document.getElementById("label_read-more")
 const mainText = document.getElementById("main__text")
 const burgerButton = document.getElementById("burger-button")
@@ -257,3 +255,4 @@ function closeBurgerMenu() {    /* Функция закрыть BurgerMenu */
 
     isOpenAnyMenu = false; 
 }
+
