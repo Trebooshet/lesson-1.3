@@ -45,8 +45,6 @@ function resizeReadMore() {
     }}
 
 
-
-
 /* Адаптация контента в зависимости от ширины экрана */
 
 function burgerMenuToLeft() {             /* Burger Menu слева */
@@ -56,13 +54,13 @@ function burgerMenuToLeft() {             /* Burger Menu слева */
     moveContactLogosToBurgerMenu()
 }
 
-function moveContactLogosToBurgerMenu() {            /* Переместить иконки Call, Chat и Profile в Burger Menu */
+function moveContactLogosToBurgerMenu() {        /* Переместить иконки Call, Chat и Profile в Burger Menu */
     burgerMenuIcons.appendChild(callLogo);
     burgerMenuIcons.appendChild(chatLogo);
     burgerMenuIcons.appendChild(profileLogo);
 }
 
-function moveContactLogosToHeader() {                /* Переместить иконки Call, Chat и Profile в Header*/
+function moveContactLogosToHeader() {            /* Переместить иконки Call, Chat и Profile в Header*/
     headerMenuRight.appendChild(callLogo);
     headerMenuRight.appendChild(chatLogo);
     headerMenuRight.appendChild(profileLogo);
@@ -108,7 +106,7 @@ function unblurBody() {             /* Разблюрить основной к�
                 
 
 function resizeWindow() {       
-    if (!isOpenAnyMenu) {               /* Нет открытых меню*/
+    if (!isOpenAnyMenu) {        /* Нет открытых меню*/
         unblurBody()
 
         if (window.innerWidth >= 1440){
