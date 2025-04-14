@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="burger-menu/burger-menu.css">
+    <link rel="stylesheet" href="modal-call/modal-call.css">
+    <link rel="stylesheet" href="modal-feedback/modal-feedback.css">
     <link rel="stylesheet" href="swipers/swipers.css">
     <title>lesson 1.3</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -52,6 +54,53 @@
                 <div>CH</div>
             </div>
         </div>
+    </article>
+    <article class="modal-call_container">
+      <div class="modal-call_title">
+        <div class="modal-call_dash"></div>
+        <div class="modal-call_text">Заказать звонок</div>
+        <div class="modal-call_close-button">
+          <img src="images/main/x.svg" alt="Иконка 'Закрыть меню'">
+        </div>
+      </div>
+      <input class="modal-call_input_tel" type="tel" placeholder="Телефон">
+      <div class="modal-call_license">
+        <p>
+          Нажимая “отправить”, вы даете согласие на 
+          <a href="">обработку персональных данных</a> 
+          и соглашаетесь с нашей <a href="">политикой конфиденциальности</a>
+        </p>
+      </div>
+      <div class="modal-call_send-button">
+        <img src="images/main/send-button.svg" alt="">
+      </div>
+        
+    </article>
+    <article class="modal-feedback_container">
+      <div class="modal-feedback_title">
+        <div class="modal-feedback_dash"></div>
+        <div class="modal-feedback_text">Обратная связь</div>
+        <div class="modal-feedback_close-button">
+          <img src="images/main/x.svg" alt="Иконка 'Закрыть меню'">
+        </div>
+      </div>
+      <form class="modal-feedback_form" action="">
+        <input class="modal-feedback_input" type="text" placeholder="Имя">
+        <input class="modal-feedback_input" type="tel" placeholder="Телефон">
+        <input class="modal-feedback_input" type="email" placeholder="Электронная почта">
+        <textarea  class="modal-feedback_textarea" name="message" id="modal-feedback_textarea" placeholder="Сообщение">
+        </textarea>
+      </form>
+      <div class="modal-feedback_license">
+        <p>
+          Нажимая “отправить”, вы даете согласие на 
+          <a href="">обработку персональных данных</a> 
+          и соглашаетесь с нашей <a href="">политикой конфиденциальности</a>
+        </p>
+      </div>
+      <div class="modal-feedback_send-button">
+        <img src="images/main/send-button.svg" alt="">
+      </div>
 
     </article>
     <header>
