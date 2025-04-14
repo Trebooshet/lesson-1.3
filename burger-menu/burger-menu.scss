@@ -87,8 +87,9 @@
         line-height: 32px;
         letter-spacing: -0.6px;
         margin: 0 8px;
+        -webkit-text-fill-color: #1B1C21;
         color: #1B1C21;
-        text-decoration: none;
+        text-decoration: none !important;
       }
   
       .burger-menu_languages {
