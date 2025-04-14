@@ -8,7 +8,7 @@
     display: flex !important;
     justify-content: space-between !important;
     align-items: flex-start !important;
-  }
+  } 
 
 body {
     h2.swiper-title {
@@ -27,6 +27,7 @@ body {
   .services-technics,
   .prices {
     margin: 16px;
+
     
   }
   
@@ -247,6 +248,8 @@ body {
       }
     }
   }
+
+
   
   @media screen and (min-width: 768px) {
     .brend-swiper,
