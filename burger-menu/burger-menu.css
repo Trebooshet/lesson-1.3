@@ -78,6 +78,11 @@
   color: #1B1C21;
   text-decoration: none !important;
 }
+.header__burger-menu-container .burger-menu_bottom .burger-menu_tel:hover,
+.header__burger-menu-container .burger-menu_bottom .burger-menu_tel:active,
+.header__burger-menu-container .burger-menu_bottom .burger-menu_tel:focus {
+  text-decoration: none !important;
+}
 .header__burger-menu-container .burger-menu_bottom .burger-menu_languages {
   width: 87px;
   height: 24px;

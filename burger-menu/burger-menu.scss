@@ -91,6 +91,12 @@
         color: #1B1C21;
         text-decoration: none !important;
       }
+      
+      .burger-menu_tel:hover,
+      .burger-menu_tel:active,
+      .burger-menu_tel:focus {
+        text-decoration: none !important; 
+     }
   
       .burger-menu_languages {
         width: 87px;
