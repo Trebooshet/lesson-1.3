@@ -1,4 +1,5 @@
 .modal-feedback_container {
+  display: none;
   width: 320px;
   height: 100vh;
   position: fixed;

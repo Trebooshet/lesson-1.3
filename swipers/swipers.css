@@ -103,8 +103,14 @@ body h2.swiper-title {
   border-radius: 6px;
 }
 
-.button_show-all-slides {
+.double-arrow {
   margin-left: 8px;
+  margin-bottom: -6px;
+  transition: 1s;
+  transform: scale(1.2);
+}
+
+.button_show-all-slides {
   display: none;
   border: none;
   align-items: center;
@@ -245,7 +251,9 @@ body h2.swiper-title {
   .technic-grid {
     display: grid;
   }
-  .button_show-all-slides,
+  .button_show-all-slides {
+    display: inline-block;
+  }
   .prices-table,
   .prices-table_header {
     display: flex;
