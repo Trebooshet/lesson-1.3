@@ -110,19 +110,10 @@ function resizeWindow() {
         unblurBody()
 
         if (window.innerWidth >= 1440){
-            // burgerMenu.style.display = "flex";
-            // burgerMenu.style.height = "100vh";
-            // burgerMenu.style.width = "320px";
             burgerCloseButton.style.display = "none";
             header.style.display = "none";
-            // header.style.opacity = 1;
-            // main.style.opacity = 1;
             main.style.marginLeft = "320px";
             main.style.width = "calc(100vw - 320px)";
-            // resizeBox.appendChild(repairText);
-            // resizeBox.appendChild(repairLogo);
-            // resizeBox.appendChild(checkStatusText);
-            // resizeBox.appendChild(checkStatusLogo);
             burgerMenuToLeft()
             moveRepearAndStatusLogosToMain();
         } else {
@@ -131,28 +122,13 @@ function resizeWindow() {
             header.style.display = "flex";
             header.style.marginLeft = 0;
             header.style.width = "100vw";
-            // header.style.opacity = 1;
-            // main.style.opacity = 1;
             main.style.marginLeft = 0;
             main.style.width = "100%";
-            // headerMenuRight.appendChild(repairText);
-            // headerMenuRight.appendChild(repairLogo);
-            // headerMenuRight.appendChild(checkStatusText);
-            // headerMenuRight.appendChild(checkStatusLogo);
             moveContactLogosToHeader();
-            // headerMenuRight.appendChild(callLogo);
-            // headerMenuRight.appendChild(chatLogo);
-            // headerMenuRight.appendChild(profileLogo)
             moveRepearAndStatusLogosToHeader();
             if (window.innerWidth < 768) {
-                // callLogo.style.display = "none";
-                // chatLogo.style.display = "none";
-                // profileLogo.style.display = "none";
                 hideContactLogos()
             } else {
-                // callLogo.style.display = "flex";
-                // chatLogo.style.display = "flex";
-                // profileLogo.style.display = "flex";
                 showContactLogos()
             }
         }
@@ -162,22 +138,11 @@ function resizeWindow() {
             burgerMenuToLeft();
             unblurBody();
             burgerMenu.style.boxShadow = "0 0 0";
-            // burgerMenu.style.display = "flex";
-            // burgerMenu.style.height = "100vh";
-            // burgerMenu.style.width = "320px";
             burgerCloseButton.style.display = "none";
             header.style.display = "none";
-            // main.style.opacity = 1;
             main.style.marginLeft = "320px";
             main.style.width = "calc(100vw - 320px)";
-            // resizeBox.appendChild(repairText);
-            // resizeBox.appendChild(repairLogo);
-            // resizeBox.appendChild(checkStatusText);
-            // resizeBox.appendChild(checkStatusLogo);
             moveRepearAndStatusLogosToMain()
-            // burgerMenuIcons.appendChild(callLogo);
-            // burgerMenuIcons.appendChild(chatLogo);
-            // burgerMenuIcons.appendChild(profileLogo);
     } else {openBurgerMenu()}  
         }   
 
@@ -190,39 +155,23 @@ window.addEventListener("load", resizeWindow)   /* Адаптация конте
 burgerButton.addEventListener("click", openBurgerMenu); /* Открыть BurgerMenu кнопкой BurgerButton*/
 
 function openBurgerMenu() {             /* Функция открыть BurgerMenu*/
-    // burgerMenu.style.display = "flex";
-    // contactLogosToBurgerMenu();
-    // callLogo.style.display = "flex";
-    // chatLogo.style.display = "flex";
-    // profileLogo.style.display = "flex";
     burgerMenuToLeft();
     showContactLogos();
     isOpenAnyMenu = true; 
 
     if (window.innerWidth >= 1440) {
-        // burgerMenu.style.width = "320px";
-        // burgerMenu.style.height = "100vh";
         burgerMenu.style.boxShadow = "0 0 0";
         unblurBody();
-        // header.style.opacity = "1";
-        // main.style.opacity = "1";
         main.style.marginLeft = "320px";
         main.style.width = "calc(100vw - 320px)";
     } else if (window.innerWidth >= 510) {
         blurBody()
-        // header.style.opacity = 0.05;
-        // main.style.opacity = 0.05;
-        // burgerMenu.style.width = "320px";
-        // burgerMenu.style.height = "100vh";
         burgerMenu.style.boxShadow = "1px 0 40px rgb(172, 170, 200)";
     } else if (window.innerWidth >= 320) {
         burgerMenu.style.width = "100%";
         burgerMenu.style.minHeight = "100vh";
         burgerMenu.style.height = "auto";   
     } 
-    // else {
-    //     burgerMenu.style.width = "320px";
-    // }
 }
 
 burgerCloseButton.addEventListener("click", closeBurgerMenu); /* Закрыть BurgerMenu кнопкой*/
@@ -236,18 +185,10 @@ document.addEventListener("click", (event) => {  /* Закрыть BurgerMenu к
 
 function closeBurgerMenu() {    /* Функция закрыть BurgerMenu */
     burgerMenu.style.display = "none";
-    // headerMenuRight.appendChild(callLogo);
-    // headerMenuRight.appendChild(chatLogo);
-    // headerMenuRight.appendChild(profileLogo);
     moveContactLogosToHeader();
     unblurBody()
-    // header.style.opacity = 1;
-    // main.style.opacity = 1;
 
     if (window.innerWidth <= 768) {
-    // callLogo.style.display = "none";
-    // chatLogo.style.display = "none";
-    // profileLogo.style.display = "none";
     hideContactLogos();
     }
 
