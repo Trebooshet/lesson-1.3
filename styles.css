@@ -301,6 +301,6 @@ main {
   }
 }
 
-#call-logo {
+.header_call-logo {
   animation: rotation 10s infinite linear;
 }

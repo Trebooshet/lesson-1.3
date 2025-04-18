@@ -45,7 +45,17 @@
             </section>
         </div>
         <div class="burger-menu_bottom">
-            <div class="burger-menu_icons"></div>
+            <div class="burger-menu_icons">
+              <div  class="header__menu-element burger-menu_call-logo" style="order: 1;">
+                <img src="images/main/call.svg" alt="Logo of 'call' button" />
+              </div>
+              <div  class="header__menu-element burger-menu_chat-logo" style="order: 2;">
+                <img src="images/main/chat.svg" alt="Logo of 'chat' button" />
+              </div>
+              <div class="header__menu-element " style="order: 3;">
+                <img src="images/main/profile.svg" alt="Logo of 'profile' button" />
+              </div>
+            </div>
             <p class="burger-menu_email">mail@cps.com</p>
             <p class="burger-menu_tel">8 800 890 8900</p>
             <div class="burger-menu_languages">
@@ -115,13 +125,13 @@
         <div class="header__dash"></div>
       </div>
       <div class="header__menu-right">
-        <div id="call-logo" class="header__menu-element header__hidden-element" style="order: 1;">
+        <div  class="header__menu-element header__hidden-element header_call-logo" style="order: 1;">
           <img src="images/main/call.svg" alt="Logo of 'call' button" />
         </div>
-        <div id="chat-logo" class="header__menu-element header__hidden-element" style="order: 2;">
+        <div id="chat-logo" class="header__menu-element header__hidden-element header_chat-logo" style="order: 2;">
           <img src="images/main/chat.svg" alt="Logo of 'chat' button" />
         </div>
-        <div  id="profile-logo" class="header__menu-element header__hidden-element" style="order: 3;">
+        <div  class="header__menu-element header__hidden-element" style="order: 3;">
           <img src="images/main/profile.svg" alt="Logo of 'profile' button" />
         </div>
         <div class="header__dash header__hidden-element"></div>
@@ -628,7 +638,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="swipers/swipers.js"></script>
     <script src="modal-call/modal-call.js"></script>
-   
+    <script src="modal-feedback/modal-feedback.js"></script>
   </body>
 </html>
 

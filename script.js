@@ -7,7 +7,10 @@ const checkStatusText = document.getElementById("check-status-text")
 const checkStatusLogo = document.getElementById("check-status-logo")
 const repairText = document.getElementById("repair-text")
 const repairLogo = document.getElementById("repair-logo")
-const callLogo = document.getElementById("call-logo")
+const callLogoHeader = document.querySelector(".header_call-logo")
+const callLogoBurgerMenu = document.querySelector(".burger-menu_call-logo")
+const chatLogoHeader = document.querySelector(".header_chat-logo")
+const chatLogoBurgerMenu = document.querySelector(".burger-menu_chat-logo")
 const chatLogo = document.getElementById("chat-logo")
 const profileLogo = document.getElementById("profile-logo")
 const resizeBox = document.getElementById("resize-box")
@@ -15,7 +18,7 @@ const headerMenuRight = document.querySelector(".header__menu-right")
 const burgerMenuIcons = document.querySelector(".burger-menu_icons")
 const header = document.querySelector("header")
 const main = document.querySelector("main")
-let isOpenAnyMenu = false;          /* Есть ли открытое меню */
+let isBurgerMenuOpened = false;          /* Есть ли открытое меню */
 
 
 /* Изменение отображения кнопки "Читать далее", при изменении ширины экрана*/
@@ -51,20 +54,20 @@ function burgerMenuToLeft() {             /* Burger Menu слева */
     burgerMenu.style.display = "flex";
     burgerMenu.style.height = "100vh";
     burgerMenu.style.width = "320px";
-    moveContactLogosToBurgerMenu()
+    // moveContactLogosToBurgerMenu()
 }
 
-function moveContactLogosToBurgerMenu() {        /* Переместить иконки Call, Chat и Profile в Burger Menu */
-    burgerMenuIcons.appendChild(callLogo);
-    burgerMenuIcons.appendChild(chatLogo);
-    burgerMenuIcons.appendChild(profileLogo);
-}
+// function moveContactLogosToBurgerMenu() {        /* Переместить иконки Call, Chat и Profile в Burger Menu */
+//     burgerMenuIcons.appendChild(callLogo);
+//     burgerMenuIcons.appendChild(chatLogo);
+//     burgerMenuIcons.appendChild(profileLogo);
+// }
 
-function moveContactLogosToHeader() {            /* Переместить иконки Call, Chat и Profile в Header*/
-    headerMenuRight.appendChild(callLogo);
-    headerMenuRight.appendChild(chatLogo);
-    headerMenuRight.appendChild(profileLogo);
-}
+// function moveContactLogosToHeader() {            /* Переместить иконки Call, Chat и Profile в Header*/
+//     headerMenuRight.appendChild(callLogo);
+//     headerMenuRight.appendChild(chatLogo);
+//     headerMenuRight.appendChild(profileLogo);
+// }
 
 function moveRepearAndStatusLogosToHeader() {   /* Переместить иконки Repair и CheckStatus в Header*/
     headerMenuRight.appendChild(repairText);
@@ -80,17 +83,17 @@ function moveRepearAndStatusLogosToMain() {   /* Переместить икон
     resizeBox.appendChild(checkStatusLogo);
 }
 
-function showContactLogos() {             /*  иконки Call, Chat и Profile */
-    callLogo.style.display = "flex";
-    chatLogo.style.display = "flex";
-    profileLogo.style.display = "flex";
-}
+// function showContactLogos() {             /*  иконки Call, Chat и Profile */
+//     callLogo.style.display = "flex";
+//     chatLogo.style.display = "flex";
+//     profileLogo.style.display = "flex";
+// }
 
-function hideContactLogos() {             /* Скрыть иконки Call, Chat и Profile */
-    callLogo.style.display = "none";
-    chatLogo.style.display = "none";
-    profileLogo.style.display = "none";
-}
+// function hideContactLogos() {             /* Скрыть иконки Call, Chat и Profile */
+//     callLogo.style.display = "none";
+//     chatLogo.style.display = "none";
+//     profileLogo.style.display = "none";
+// }
 
 function blurBody() {             /* Заблюрить основной контент */
     header.style.opacity = "0.05";
@@ -106,7 +109,7 @@ function unblurBody() {             /* Разблюрить основной к�
                 
 
 function resizeWindow() {       
-    if (!isOpenAnyMenu) {        /* Нет открытых меню*/
+    if (!isBurgerMenuOpened) {        /* Нет открытых меню*/
         unblurBody()
 
         if (window.innerWidth >= 1440){
@@ -124,16 +127,16 @@ function resizeWindow() {
             header.style.width = "100vw";
             main.style.marginLeft = 0;
             main.style.width = "100%";
-            moveContactLogosToHeader();
+            // moveContactLogosToHeader();
             moveRepearAndStatusLogosToHeader();
-            if (window.innerWidth < 768) {
-                hideContactLogos()
-            } else {
-                showContactLogos()
-            }
+            // if (window.innerWidth < 768) {
+            //     hideContactLogos()
+            // } else {
+            //     showContactLogos()
+            // }
         }
     }   
-    else if (isOpenAnyMenu && window.innerWidth >= 1440) { /* Есть открытое меню и ширина > 1440 */
+    else if (isBurgerMenuOpened && window.innerWidth >= 1440) { /* Есть открытое меню и ширина > 1440 */
             closeBurgerMenu();
             burgerMenuToLeft();
             unblurBody();
@@ -156,8 +159,8 @@ burgerButton.addEventListener("click", openBurgerMenu); /* Открыть Burger
 
 function openBurgerMenu() {             /* Функция открыть BurgerMenu*/
     burgerMenuToLeft();
-    showContactLogos();
-    isOpenAnyMenu = true; 
+    // showContactLogos();
+    isBurgerMenuOpened = true; 
 
     if (window.innerWidth >= 1440) {
         burgerMenu.style.boxShadow = "0 0 0";
@@ -176,22 +179,55 @@ function openBurgerMenu() {             /* Функция открыть BurgerM
 
 burgerCloseButton.addEventListener("click", closeBurgerMenu); /* Закрыть BurgerMenu кнопкой*/
 
-document.addEventListener("click", (event) => {  /* Закрыть BurgerMenu кликом по пустой области*/
-    if (!burgerMenu.contains(event.target) && 
-        !burgerButton.contains(event.target) && window.innerWidth < 1440) {
-        closeBurgerMenu();
+document.addEventListener("click", (event) => {    /* Закрыть BurgerMenu кликом по пустой области*/
+    
+    if (isBurgerMenuOpened || isCallMenuOpened || isChatMenuOpened) {
+    
+        if (window.innerWidth > 440 && window.innerWidth < 860) {
+                if (!callMenu.contains(event.target) &&
+                    !closeCallMenuButton.contains(event.target) &&
+                    !feedbackMenu.contains(event.target) &&
+                    !closeFeedbackMenuButton.contains(event.target)) {
+                    // closeBurgerMenu();
+                    closeCallMenu();
+                    closeFeedbackMenu();
+                } 
+                // else if (!isCallMenuOpened || !isChatMenuOpened &&
+                //     !burgerMenu.contains(event.target) && 
+                //     !burgerButton.contains(event.target)) {
+                //     closeBurgerMenu();
+                // }
+
+        } else if  (window.innerWidth < 1440) {
+                if (!burgerMenu.contains(event.target) && 
+                    !burgerButton.contains(event.target) && 
+                    !callMenu.contains(event.target) &&
+                    !closeCallMenuButton.contains(event.target) &&
+                    !feedbackMenu.contains(event.target) &&
+                    !closeFeedbackMenuButton.contains(event.target)) {
+                    closeBurgerMenu();
+                    closeCallMenu();
+                    closeFeedbackMenu();
+                }
+        } else {
+                if (!burgerMenu.contains(event.target) && 
+                    !burgerButton.contains(event.target) && 
+                    !callMenu.contains(event.target) &&
+                    !closeCallMenuButton.contains(event.target) &&
+                    !feedbackMenu.contains(event.target) &&
+                    !closeFeedbackMenuButton.contains(event.target)) {
+                    closeCallMenu();
+                    closeFeedbackMenu();
+                }
+        }   
     }
 })
 
 function closeBurgerMenu() {    /* Функция закрыть BurgerMenu */
     burgerMenu.style.display = "none";
-    moveContactLogosToHeader();
-    unblurBody()
+    if (isCallMenuOpened || isChatMenuOpened) {
+        blurBody();
+    } else unblurBody();
 
-    if (window.innerWidth <= 768) {
-    hideContactLogos();
-    }
-
-    isOpenAnyMenu = false; 
+    isBurgerMenuOpened = false; 
 }
-
