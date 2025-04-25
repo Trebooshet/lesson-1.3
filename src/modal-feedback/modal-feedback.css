@@ -1,0 +1,105 @@
+.modal-feedback_container {
+  display: none;
+  width: 320px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 200;
+  background-color: #ffffff;
+  padding-top: 64px;
+}
+.modal-feedback_container .modal-feedback_title {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+}
+.modal-feedback_container .modal-feedback_title .modal-feedback_dash {
+  height: 40px;
+  width: 0;
+  border-right: 4px solid #41f6d7;
+  border-radius: 4px;
+}
+.modal-feedback_container .modal-feedback_title .modal-feedback_text {
+  margin: 12px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+.modal-feedback_container .modal-feedback_title .modal-feedback_close-button {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+}
+.modal-feedback_container .modal-feedback_form {
+  margin-top: 38px;
+  width: calc(100% - 32px);
+}
+.modal-feedback_container .modal-feedback_form .modal-feedback_input {
+  margin: 8px 16px;
+  width: 100%;
+  height: 48px;
+  padding-left: 16px;
+  border: 1px solid #c6c6c6;
+  border-radius: 8px;
+}
+.modal-feedback_container
+  .modal-feedback_form
+  .modal-feedback_input::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #b5b6bc;
+}
+.modal-feedback_container .modal-feedback_form .modal-feedback_textarea {
+  margin: 8px 16px;
+  width: 100%;
+  min-height: 118px;
+  padding-left: 16px;
+  border: 1px solid #c6c6c6;
+  border-radius: 8px;
+}
+.modal-feedback_container .modal-feedback_license {
+  margin: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+}
+.modal-feedback_container .modal-feedback_license a {
+  color: #ff3e79;
+  text-decoration: none;
+}
+.modal-feedback_container .modal-feedback_send-button {
+  margin: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: 321px) and (max-width: 439px) {
+  .modal-feedback_container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 440px) {
+  .modal-feedback_container {
+    width: 440px;
+    box-shadow: -1px 0 40px rgb(172, 170, 200);
+  }
+}
+@media screen and (min-width: 530px) {
+  .modal-feedback_container {
+    width: 440px;
+    padding-top: 0;
+    box-shadow: -1px 0 40px rgb(172, 170, 200);
+  }
+  .modal-feedback_container .modal-feedback_title .modal-feedback_close-button {
+    top: 14px;
+    left: -72px;
+  }
+}
+
+/*# sourceMappingURL=modal-feedback.css.map */

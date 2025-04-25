@@ -1,0 +1,303 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: url("TT_Lakes/TT\ Lakes\ Neue\ Trial\ Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("TT_Lakes/TT\ Lakes\ Neue\ Trial\ Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("TT_Lakes/TT\ Lakes\ Neue\ Trial\ Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "TT Lakes", sans-serif;
+  unicode-bidi: normal;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  overflow: auto;
+}
+
+/*  Header Menu */
+
+header {
+  width: 100%;
+  height: 88px;
+  padding: 8px 8px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__menu-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__menu-element {
+  margin: 16px 8px;
+}
+
+#repair-logo,
+#check-status-logo {
+  padding-top: 5px;
+}
+
+.header__menu-text {
+  padding: 8px;
+  font-family: "TT Lakes";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+}
+
+.header__logo {
+  margin: 10.59px 12.73px 10.59px 8.73px;
+}
+
+.header__dash {
+  background-color: #eaeaea;
+  width: 2px;
+  height: 32px;
+  margin: 20px 12px 28px 4px;
+}
+
+.header__hidden-element,
+.header__hidden-text {
+  display: none;
+}
+
+/* Main */
+
+main {
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  background-color: #f8f8f8;
+  padding-top: 18px;
+  overflow-x: hidden;
+}
+
+/* Заголовок раздела Main */
+
+.main__title {
+  /* padding-top: 24px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-with-dash,
+#resize-box {
+  display: flex;
+  margin: 0 16px 12px 0;
+  align-items: center;
+}
+
+.aqua-dash {
+  height: 40px;
+  border-right: 4px solid #41f6d7;
+  border-radius: 4px;
+  margin: 0 16px 0 0;
+}
+
+.main__title h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+}
+
+/* Меню услуг */
+
+.main__services {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  margin: 12px 16px;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 40px;
+  padding: 8px 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #7e7e82;
+  text-wrap: nowrap;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+
+.service:hover {
+  background-color: white;
+  border: 2px solid #b8ffec;
+  cursor: default;
+}
+
+/* Main content. Текст и фото */
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+#main__text {
+  /* Основной текст */
+  width: 90vw;
+  height: 90px;
+  margin: 12px 16px 8px 16px;
+  text-indent: 1em;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  font-style: normal;
+  color: #1b1c21;
+  overflow: hidden;
+}
+
+.main__image img {
+  /* Фото */
+  width: 100%;
+  margin: 8px 0 8px;
+}
+
+.checkbox_read-more {
+  display: none;
+}
+
+#label_read-more {
+  /* Кнопка "Читать далее" */
+  display: flex;
+  align-items: center;
+  margin: 8px 16px;
+  text-wrap: nowrap;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.main__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 45px 33px 13px 33px;
+}
+
+.main__footer div {
+  margin: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: #7e7e82;
+}
+
+/* Main Для экранов от 768 до 1120 пикселей в ширину */
+
+@media screen and (min-width: 768px) {
+  .header__hidden-element {
+    display: flex;
+  }
+
+  .header__logo {
+    order: 3;
+  }
+
+  .main__content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #main__text {
+    width: calc(50vw - 24px);
+    height: 160px;
+    justify-content: flex-left;
+    margin-left: 24px;
+  }
+
+  .main__image {
+    width: 50vw;
+    justify-content: flex-right;
+    margin-right: 24px;
+  }
+
+  .main__footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Main Для экранов от 1120 пикселей в ширину */
+
+@media screen and (min-width: 1120px) {
+  .header__hidden-text {
+    display: flex;
+  }
+
+  .service {
+    padding: 8px 20px;
+  }
+
+  #main__text {
+    font-size: 1.1em;
+    line-height: 24px;
+    width: calc((100vw - 370px) / 2);
+    height: 160px;
+    justify-content: flex-left;
+    margin-left: 34px;
+    margin-right: 36px;
+  }
+
+  .main__image {
+    width: 50vw;
+    justify-content: flex-right;
+    margin-right: 24px;
+  }
+}
+
+@keyframes rotation {
+  /* Анимация вращения */
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.header_call-logo {
+  animation: rotation 10s infinite linear;
+}
