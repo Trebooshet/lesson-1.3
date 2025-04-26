@@ -1,3 +1,7 @@
+import './modal-call/modal-call.js';
+import './modal-feedback/modal-feedback.js';
+import './swipers/swipers.js';
+
 const labelReadMore = document.getElementById("label_read-more");
 const mainText = document.getElementById("main__text");
 const burgerButton = document.getElementById("burger-button");
