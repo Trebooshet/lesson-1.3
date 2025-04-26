@@ -1,3 +1,6 @@
+import Swiper from 'swiper/bundle';
+
+
 new Swiper(".brend-swiper", {
   direction: "horizontal",
   pagination: {
