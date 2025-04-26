@@ -8,7 +8,8 @@ module.exports = {
   entry: './src/script.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: './'
   },
   plugins: [
     new CleanWebpackPlugin(),
