@@ -1,5 +1,6 @@
 const path = require('path')
-// const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -12,7 +13,12 @@ module.exports = {
     publicPath: './'
   },
   plugins: [
-    // new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['index.html', 'bundle.js', 'bundle.css']
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'bundle.css', 
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html', 
       filename: 'index.html' 
@@ -27,19 +33,9 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
 
       },
-      {
-        test: /\.(png | svg | jpg)/,
-        use: ['file-loader']
-
-      },
-      {
-        test: /\.(ttf | woff | woff2)/,
-        use: ['file-loader']
-
-      }
     ]
   }
 }
