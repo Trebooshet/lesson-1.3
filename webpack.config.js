@@ -22,7 +22,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html', 
-      filename: 'index.html' 
+      filename: 'index.html',
+      minify: false 
     }),
     new CopyPlugin({
       patterns: [
@@ -44,7 +45,9 @@ module.exports = {
           options: {
             presets: [
                 ['@babel/preset-env', {
-                'targets': '> 0.25%, not dead'
+                'targets': '> 0.25%, not dead', 
+                "useBuiltIns": "usage",
+                "corejs": 3
               }]
             ]
           }
