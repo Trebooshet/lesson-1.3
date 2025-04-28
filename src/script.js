@@ -105,13 +105,8 @@ function resizeWindow() {
       header.style.width = "100vw";
       main.style.marginLeft = 0;
       main.style.width = "100%";
-      // moveContactLogosToHeader();
       moveRepearAndStatusLogosToHeader();
-      // if (window.innerWidth < 768) {
-      //     hideContactLogos()
-      // } else {
-      //     showContactLogos()
-      // }
+     
     }
   } else if (state.isBurgerMenuOpened && window.innerWidth >= 1440) {
     /* Есть открытое меню и ширина > 1440 */
@@ -182,15 +177,10 @@ document.addEventListener("click", (event) => {
         !feedbackMenu.contains(event.target) &&
         !closeFeedbackMenuButton.contains(event.target)
       ) {
-        // closeBurgerMenu();
         closeCallMenu();
         closeFeedbackMenu();
       }
-      // else if (!isCallMenuOpened || !isChatMenuOpened &&
-      //     !burgerMenu.contains(event.target) &&
-      //     !burgerButton.contains(event.target)) {
-      //     closeBurgerMenu();
-      // }
+      
     } else if (window.innerWidth < 1440) {
       if (
         !burgerMenu.contains(event.target) &&

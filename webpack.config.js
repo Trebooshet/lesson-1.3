@@ -25,8 +25,8 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'src/images', to: 'images' },
-      ],
+        { from: 'src/images', to: 'images' }
+      ]
     })
   ],
   module: {
@@ -34,8 +34,21 @@ module.exports = {
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
-
       },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+                ['@babel/preset-env', {
+                'targets': '> 0.25%, not dead'
+              }]
+            ]
+          }
+        }
+      }
     ]
   }
 }
