@@ -12,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname),
     publicPath: './'
   },
+  devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['index.html', 'bundle.js', 'bundle.css']
