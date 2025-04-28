@@ -1,9 +1,9 @@
-import 'normalize.css';
+import 'normalize.css'
 import './styles.css'
 import './burger-menu/burger-menu.css'
 import './modal-call/modal-call.css'
 import './modal-feedback/modal-feedback.css'
-import 'swiper/css';
+import 'swiper/css'
 import './swipers/swipers.css'
 
 import {
